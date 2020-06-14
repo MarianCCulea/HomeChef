@@ -11,6 +11,7 @@
         android:layout_marginLeft="30dp"
         android:text="@string/title_deleteAll"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
         app:layout_anchor="@+id/button_deleteAll"
         app:layout_anchorGravity="end|center" />
 

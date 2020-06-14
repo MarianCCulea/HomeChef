@@ -63,7 +63,6 @@ public class FirstFragment extends Fragment {
 
         String ing="";
 
-        meal.prepare();
         for(int i=0;i<meal.getStrIngredient().size();i++){
             if(!(meal.getStrIngredient().get(i).isEmpty()))
             ing+=meal.getStrIngredient().get(i)+"-"+meal.getStrMeasure().get(i)+" \n";

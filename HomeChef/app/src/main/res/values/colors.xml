@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ff3f34</color>
+    <color name="colorPrimary">#ff5e57</color>
     <color name="colorPrimaryDark">#575fcf</color>
-    <color name="colorAccent">#ff5e57</color>
+    <color name="colorAccent">#ff3f34</color>
     <color name="megaman">#4bcffa</color>
     <color name="highlighterPink">#ef5777</color>
     <color name="sizzlingRed">#f53b57</color>
     <color name="chiGong">#d63031</color>
     <color name="orangeVille">#e17055</color>
+    <color name="casandora_yellow">#feca57</color>
 
 </resources>

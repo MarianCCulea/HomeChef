@@ -1,6 +1,7 @@
 package com.example.homechef.ui.shopping;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
@@ -70,8 +71,8 @@ public class SecondFragment extends Fragment {
                 .into(image);
         name.setText(meal.getStrMeal());
         area.setText(meal.getStrArea());
-        category.setText(meal.getStrCategory());
-        tag.setText("");
+        category.setText("");
+        tag.setText(meal.getStrCategory());
         link.setText(meal.getStrYoutube());
         instructions.setText(meal.getStrInstructions());
 
@@ -81,4 +82,6 @@ public class SecondFragment extends Fragment {
         link.setMovementMethod(LinkMovementMethod.getInstance());
 
     }
+
+
 }

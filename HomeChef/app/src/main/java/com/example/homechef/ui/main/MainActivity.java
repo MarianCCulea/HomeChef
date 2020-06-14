@@ -63,11 +63,14 @@ private DrawerLayout drawer;
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user=mAuth.getCurrentUser();
         if(user!=null) {
-            TextView usersss=findViewById(R.id.user_username);
-            TextView email=findViewById(R.id.user_username);
-            usersss.setText(user.getDisplayName());
-            email.setText(user.getEmail());
+            TextView usersss=navigationView.getHeaderView(0).findViewById(R.id.user_email);
+            usersss.setText(user.getEmail());
+        }else{
+            navigationView.getMenu().findItem(R.id.login).setVisible(true);
+            navigationView.getMenu().findItem(R.id.drawer_logout).setVisible(false);
         }
+
+
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -86,7 +89,7 @@ private DrawerLayout drawer;
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavController navController = Navigation.findNavController(this, R.id.fragment_container);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
@@ -124,6 +127,10 @@ private DrawerLayout drawer;
             case R.id.drawer_logout :
                 mAuth = FirebaseAuth.getInstance();
                 mAuth.signOut();
+                intent= new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.login :
                 intent= new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 break;

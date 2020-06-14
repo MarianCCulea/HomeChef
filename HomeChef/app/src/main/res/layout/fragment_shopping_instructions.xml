@@ -7,6 +7,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         tools:context=".ui.shopping.SecondFragment"
+    android:background="@drawable/scrollz"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -20,17 +21,18 @@
                 android:id="@+id/image_instructions"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                app:srcCompat="@android:drawable/ic_menu_gallery"/>
+                app:srcCompat="@android:drawable/ic_menu_gallery"
+                />
 
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Teriaki chiken Casserole"
                 android:id="@+id/text_name_instructions"
-                android:layout_toRightOf="@+id/image_instructions"
+                android:layout_toEndOf="@+id/image_instructions"
                 android:textColor="#000"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:textSize="17sp"/>
 
             <TextView
@@ -70,7 +72,8 @@
             android:id="@+id/text_link_instructions"
             android:textColor="#000"
             android:layout_marginLeft="30dp"
-            android:textSize="17sp"/>
+            android:textSize="17sp"
+            android:onClick="click_Youtube"/>
         <RelativeLayout
 
             android:layout_width="match_parent"
@@ -82,6 +85,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/title_instrictions"
                 android:id="@+id/sda"
+                android:layout_marginTop="15dp"
                 android:textColor="#000"
                 android:textSize="17sp"/>
 
@@ -119,7 +123,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_done"
-        android:layout_marginLeft="150dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         />
 </LinearLayout>

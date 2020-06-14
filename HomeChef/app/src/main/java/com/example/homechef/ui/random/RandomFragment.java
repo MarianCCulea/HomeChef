@@ -48,7 +48,6 @@ public class RandomFragment extends Fragment {
             @Override
             public void onChanged(@Nullable Meal meal) {
                 randomMeal=meal;
-                Toast.makeText(getContext(), "This"+randomMeal.getStrIngredient1(), Toast.LENGTH_SHORT).show();
                 RequestOptions defaultOptions = new RequestOptions()
                         .error(R.drawable.ic_launcher_background);
                 Glide.with(getActivity())

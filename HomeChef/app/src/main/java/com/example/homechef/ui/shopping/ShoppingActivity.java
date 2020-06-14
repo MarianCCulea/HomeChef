@@ -1,5 +1,7 @@
 package com.example.homechef.ui.shopping;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.example.homechef.localstorage.Favourite;
@@ -71,7 +73,7 @@ public class ShoppingActivity extends AppCompatActivity {
             Date current = Calendar.getInstance().getTime();
             String formated = DateFormat.getDateInstance(DateFormat.FULL).format(current);
             History history = new History(CURRENT_MEAL.getIdMeal(), CURRENT_MEAL.getStrMeal(), CURRENT_MEAL.getStrMealThumb(), formated);
-            mDatabase.child("history").child(user.getDisplayName()).child(Math.random() + "").setValue(history).
+            mDatabase.child("history").setValue(history).
                     addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
@@ -88,6 +90,12 @@ public class ShoppingActivity extends AppCompatActivity {
 
     }
 
+
+    public void click_Youtube(View view){
+        Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(ShoppingActivity.getCurrentMeal().getStrYoutube()));
+        startActivity(webIntent);
+    }
 
     @Override
     public boolean onSupportNavigateUp() {

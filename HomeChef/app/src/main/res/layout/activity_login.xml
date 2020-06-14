@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.login.LoginActivity"
-    android:background="@drawable/background">
+    android:background="@drawable/bg">
 
 
     <EditText
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="95dp"
         android:layout_marginTop="35dp"
-        android:backgroundTint="@color/colorAccent"
+        android:backgroundTint="@color/casandora_yellow"
         android:text="@string/button_login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edittext_password" />
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="110dp"
-        android:backgroundTint="@color/colorAccent"
+        android:backgroundTint="@color/casandora_yellow"
         android:text="@string/button_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edittext_password" />
@@ -72,7 +72,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorAccent"
+        android:backgroundTint="@color/casandora_yellow"
         android:text="@string/button_guest"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +85,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="19sp"
+        android:textColor="#000000"
         android:text="To register a new account write your \n  credentials and then click register"
         app:layout_constraintBottom_toTopOf="@+id/button_singin_google"
         app:layout_constraintEnd_toEndOf="parent"
