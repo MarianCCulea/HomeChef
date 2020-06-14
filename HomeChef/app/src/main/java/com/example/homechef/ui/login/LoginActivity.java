@@ -36,7 +36,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class LoginActivity extends AppCompatActivity {
-
     private static final int RC_SIGN_IN = 100;
     private GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
@@ -104,22 +103,21 @@ public class LoginActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleSignInResult(task);
+            try {
+                // Google Sign In was successful, authenticate with Firebase
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+                Log.d("MyTAG", "firebaseAuthWithGoogle:" + account.getId());
+                FirebaseGoogleAuth(account.getIdToken());
+            } catch (ApiException e) {
+                // Google Sign In failed, update UI appropriately
+                Log.w("MYTAG", "Google sign in failed", e);
+                // ...
+            }
         }
     }
 
-    private void handleSignInResult(Task<GoogleSignInAccount> complete) {
-        try {
-            GoogleSignInAccount acc = complete.getResult(ApiException.class);
-            Toast.makeText(this, "Login Succesfull", Toast.LENGTH_SHORT).show();
-            FirebaseGoogleAuth(acc);
-        } catch (ApiException e) {
-            FirebaseGoogleAuth(null);
-        }
-    }
-
-    private void FirebaseGoogleAuth(GoogleSignInAccount acc) {
-        AuthCredential authCredential = GoogleAuthProvider.getCredential(acc.getIdToken(), null);
+    private void FirebaseGoogleAuth(String idToken) {
+        AuthCredential authCredential = GoogleAuthProvider.getCredential(idToken, null);
         mAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
