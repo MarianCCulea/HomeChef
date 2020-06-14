@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<group android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_search" />
+
+    <item
+        android:id="@+id/navigation_random"
+        android:icon="@drawable/dice"
+        android:title="@string/title_random" />
+
+
+    <item
+        android:id="@+id/drawer_favourites"
+        android:icon="@drawable/ic_star_black"
+        android:title="@string/title_favourites" />
+
+    <item
+        android:id="@+id/drawer_history"
+        android:icon="@drawable/ic_history_black"
+        android:title="@string/menu_history" />
+
+</group>
+<item android:title="@string/menu_settings">
+    <menu>
+    <item
+        android:id="@+id/drawer_share"
+        android:icon="@drawable/ic_share"
+        android:title="@string/menu_share"/>
+
+    <item
+        android:id="@+id/drawer_location"
+        android:icon="@drawable/ic_location_black"
+        android:title="@string/menu_location" />
+        <item
+            android:id="@+id/drawer_logout"
+            android:icon="@drawable/ic_close_black_24dp"
+            android:title="@string/menu_logout" />
+    </menu>
+</item>
+</menu>

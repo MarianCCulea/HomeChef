@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearLayout"
+        tools:context=".ui.shopping.FirstFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/image_shoppinglist"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/text_name_shoppinglist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/image_shoppinglist"
+                android:text="Food"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/text_area_shoppinglist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:text="Area"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/ing"
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:textColor="#000"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/ing"
+                android:text=" ingredient1\n \n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n ingredient2\n "
+                android:textColor="#000"
+                android:textSize="17sp" />
+            <Button
+                android:id="@+id/button_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_goto_instr"
+                android:layout_marginTop="150dp"
+                android:layout_toStartOf="@+id/ingredients"/>
+        </RelativeLayout>
+</ScrollView>
+
+
+    </LinearLayout>
+

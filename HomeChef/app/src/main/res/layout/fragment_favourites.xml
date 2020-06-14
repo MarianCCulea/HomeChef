@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Button
+        android:id="@+id/button_deleteAll"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/title_deleteAll"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@+id/button_deleteAll"
+        app:layout_anchorGravity="end|center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/favourite_recycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    tools:listitem="@layout/list_item"
+/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

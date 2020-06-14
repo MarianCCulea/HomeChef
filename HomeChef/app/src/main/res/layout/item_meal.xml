@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/ic_menu_gallery"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food"
+            android:id="@+id/image_name"
+            android:layout_toRightOf="@+id/imageView"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Area"
+            android:id="@+id/category"
+            android:textColor="#000"
+            android:layout_marginLeft="270dp"
+            android:layout_centerVertical="true"
+            android:textSize="17sp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingredients"
+            android:id="@+id/sda"
+            android:textColor="#000"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ingredient1\n ingredient2\n Ing3"
+            android:id="@+id/ingredients"
+            android:layout_toRightOf="@+id/sda"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+</LinearLayout>
+
+

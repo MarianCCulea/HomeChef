@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HomeChef</string>
+    <string name="menu_settings">Indstillinger</string>
+    <string name="menu_share">Del</string>
+    <string name="menu_favorites">" Favoritter"</string>
+    <string name="menu_location">" Nærmeste marked"</string>
+    <string name="menu_history">Historie</string>
+    <string name="first_fragment_label">Første fragment</string>
+    <string name="second_fragment_label">Andet fragment</string>
+    <string name="next">Næste</string>
+    <string name="previous">Tidligere</string>
+    <string name="button_login">" Log på"</string>
+    <string name="button_register">Tilmeld</string>
+    <string name="button_guest">Fortsæt som gæst</string>
+    <string name="title_history">Historie</string>
+    <string name="title_settings">Indstillinger</string>
+    <string name="title_search">Søg</string>
+    <string name="title_random">Tilfældig</string>
+    <string name="title_home">Hjem</string>
+    <string name="title_favourites">" Favoritter"</string>
+    <string name="title_activity_shopping">Handle ind</string>
+    <string name="textview_search_for_random">Klik for at få et tilfældigt måltid</string>
+    <string name="button_goto_instr" translatable="false">Gå til instruktionerne</string>
+    <string name="title_randomize">Få tilfældigt måltid</string>
+    <string name="title_instrictions">" Instruktioner"</string>
+    <string name="button_done">Søg efter et andet måltid</string>
+    <string name="title_getshopping">" Vælg dette måltid"</string>
+    <string name="title_deleteAll">Slet alt</string>
+</resources>
