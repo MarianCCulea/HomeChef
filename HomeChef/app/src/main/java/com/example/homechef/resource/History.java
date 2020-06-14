@@ -5,22 +5,22 @@ import com.google.firebase.database.IgnoreExtraProperties;
 @IgnoreExtraProperties
 public class History {
 
+    public String date;
     public int idMeal;
     public String strMeal;
     public String strMealThumb;
-    public String date;
 
+    public History(String date, int idMeal, String strMeal, String strMealThumb) {
+        this.date = date;
+        this.idMeal = idMeal;
+        this.strMeal = strMeal;
+        this.strMealThumb = strMealThumb;
+    }
 
     public History() {
         // Default constructor required for calls to DataSnapshot.getValue(History.class)
     }
 
-    public History(int idMeal, String strMeal, String strMealThumb, String date) {
-        this.idMeal = idMeal;
-        this.strMeal = strMeal;
-        this.strMealThumb = strMealThumb;
-        this.date = date;
-    }
 
     public int getIdMeal() {
         return idMeal;

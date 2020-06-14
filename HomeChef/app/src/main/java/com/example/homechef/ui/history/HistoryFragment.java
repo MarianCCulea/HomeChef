@@ -44,20 +44,19 @@ public class HistoryFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.fragment_history, container, false);
         recyclerView = root.findViewById(R.id.history_recycler);
-
+        recyclerView.hasFixedSize();
+        mAdapter=new HistoryAdapter(root.getContext());
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser user=mAuth.getCurrentUser();
         if(user!=null) {
-            Toast.makeText(getActivity(), "Must be logged in to see history", Toast.LENGTH_SHORT).show();
-        }else {
-
             new FirebaseDatabaseHelper().getHistory(new FirebaseDatabaseHelper.DataStatus() {
                 @Override
                 public void dataIsLoaded(List<History> histories, List<String> strings) {
                     root.findViewById(R.id.progressBar_history).setVisibility(View.GONE);
-                    mAdapter = new HistoryAdapter(root.getContext(), histories, strings);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     recyclerView.setAdapter(mAdapter);
+                    mAdapter.setHistory(histories);
+                    mAdapter.notifyDataSetChanged();
                 }
 
                 @Override
@@ -68,5 +67,6 @@ public class HistoryFragment extends Fragment {
         }
         return root;
     }
+
 
 }

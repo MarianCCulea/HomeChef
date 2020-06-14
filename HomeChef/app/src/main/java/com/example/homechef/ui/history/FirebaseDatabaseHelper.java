@@ -1,5 +1,7 @@
 package com.example.homechef.ui.history;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
 import com.example.homechef.resource.History;
@@ -33,14 +35,19 @@ public class FirebaseDatabaseHelper {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 historyList.clear();
                 List<String> keys = new ArrayList<>();
-                for (DataSnapshot key : dataSnapshot.getChildren()) {
-                    keys.add(key.getKey());
-                    History history = key.getValue(History.class);
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    History history=new History();
+                    history.setDate(ds.getValue(History.class).getDate());
+                    history.setIdMeal(ds.getValue(History.class).getIdMeal());
+                    history.setStrMeal(ds.getValue(History.class).getStrMeal());
+                    history.setStrMealThumb(ds.getValue(History.class).getStrMealThumb());
+
+
+                    Log.i("Database", "MUEI---"+ history);
                     historyList.add(history);
                 }
                 dataStatus.dataIsLoaded(historyList, keys);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 

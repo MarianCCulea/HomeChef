@@ -23,14 +23,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
 
-    private List<History> mHistory = new ArrayList<>();
-    private List<String> keys;
+    private List<History> mHistory;
     private Context mContext;
 
-    public HistoryAdapter(Context context, List<History> mHistory, List<String> keys) {
-        this.mHistory = mHistory;
+    public HistoryAdapter(Context context) {
         this.mContext = context;
-        this.keys = keys;
+        mHistory = new ArrayList<>();
     }
 
     @NonNull
@@ -52,7 +50,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
                 .setDefaultRequestOptions(defaultOptions)
                 .load(mHistory.get(i).getStrMealThumb())
                 .into(holder.mImage);
-        holder.key = keys.get(i);
     }
 
     @Override
@@ -62,12 +59,15 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         return 0;
     }
 
+    public void setHistory(List<History> histories) {
+        mHistory=histories;
+    }
+
     class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mName;
         private TextView mDate;
         private CircleImageView mImage;
-        private String key;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

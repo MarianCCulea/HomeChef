@@ -72,7 +72,7 @@ public class ShoppingActivity extends AppCompatActivity {
             DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
             Date current = Calendar.getInstance().getTime();
             String formated = DateFormat.getDateInstance(DateFormat.FULL).format(current);
-            History history = new History(CURRENT_MEAL.getIdMeal(), CURRENT_MEAL.getStrMeal(), CURRENT_MEAL.getStrMealThumb(), formated);
+            History history = new History(formated,CURRENT_MEAL.getIdMeal(),CURRENT_MEAL.getStrMeal(),CURRENT_MEAL.getStrMealThumb());
             mDatabase.child("history").setValue(history).
                     addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
